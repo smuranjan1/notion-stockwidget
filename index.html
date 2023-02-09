@@ -1,38 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Notion Stock Widget</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body class="light">
-    <!-- Light/Dark Btn -->
-    <div class="settings">
-      <div class="modes">
-        <button class="light">Light</button>
-        <button class="dark">Dark</button>
-      </div>
-    </div>
-    <!-- TradingView Widget BEGIN -->
+<!-- TradingView Widget BEGIN -->
 <div class="tradingview-widget-container">
   <div class="tradingview-widget-container__widget"></div>
-  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com" rel="noopener" target="_blank"><span class="blue-text">Crypto</span></a> by TradingView</div>
+  
   <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
   {
   "colorTheme": "light",
-  "dateRange": "1M",
+  "dateRange": "12M",
   "showChart": true,
   "locale": "en",
-  "width": "100%",
-  "height": "100%",
   "largeChartUrl": "",
   "isTransparent": true,
   "showSymbolLogo": false,
   "showFloatingTooltip": false,
-  "plotLineColorGrowing": "rgba(60, 120, 216, 1)",
-  "plotLineColorFalling": "rgba(60, 120, 216, 1)",
-  "gridLineColor": "rgba(42, 46, 57, 0)",
+  "width": "400",
+  "height": "660",
+  "plotLineColorGrowing": "rgba(41, 98, 255, 1)",
+  "plotLineColorFalling": "rgba(41, 98, 255, 1)",
+  "gridLineColor": "rgba(240, 243, 250, 0)",
   "scaleFontColor": "rgba(106, 109, 120, 1)",
   "belowLineFillColorGrowing": "rgba(41, 98, 255, 0.12)",
   "belowLineFillColorFalling": "rgba(41, 98, 255, 0.12)",
@@ -41,19 +25,31 @@
   "symbolActiveColor": "rgba(41, 98, 255, 0.12)",
   "tabs": [
     {
-      "title": "Market",
+      "title": "Indices",
       "symbols": [
         {
           "s": "FOREXCOM:SPXUSD",
           "d": "S&P 500"
         },
         {
-          "s": "BLACKBULL:US30",
-          "d": "DJI"
+          "s": "FOREXCOM:NSXUSD",
+          "d": "US 100"
         },
         {
-          "s": "NASDAQ:NDX",
-          "d": "NASDAQ"
+          "s": "FOREXCOM:DJI",
+          "d": "Dow 30"
+        },
+        {
+          "s": "INDEX:NKY",
+          "d": "Nikkei 225"
+        },
+        {
+          "s": "INDEX:DEU40",
+          "d": "DAX Index"
+        },
+        {
+          "s": "FOREXCOM:UKXGBP",
+          "d": "UK 100"
         }
       ],
       "originalTitle": "Indices"
@@ -80,8 +76,3 @@
   </script>
 </div>
 <!-- TradingView Widget END -->
-    <!-- Custom JS for widget styling BEGIN -->
-    <script src="app.js"></script>
-    <!-- Custom JS END -->
-  </body>
-</html>
